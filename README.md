@@ -25,3 +25,24 @@
                 numero = random.randrange(0, len(palavras))
                 palavra_secreta = palavras[numero].upper()
                 return palavra_secreta
+- Função **imprime_mensagem_abertura():**<br><br>
+  Está função imprimi a mensagem bem-vindo, para dizer que o jogo começou.
+  
+      def imprime_mensagem_abertura():
+        print("*********************************")
+        print("***Bem vindo ao jogo da Forca!***")
+        print("*********************************")
+        
+- Função **pede_chute():**<br><br>
+  Uma vez que chamar está função ela vai ter um input lhe perguntando qual a letra, assim que informar qual letra você deseja colocar, ela retorna a letra informada.
+  
+      def pede_chute():
+        chute = input("Qual letra? ")
+        chute = chute.strip().upper()
+        return chute
+        
+- Função **inicializa_letras_acertadas():**<br><br>
+  Uma função onde ela tem como objetivo percorrer a lista do arquivo, a palavra que for escolhida ela irá colocar um [_] para simular o jogo da forca. Então se a palavra for uva, ela irá ficar assim ['_', '_', '_'].
+  
+      def inicializa_letras_acertadas(palavra):
+        return ["_" for letra in palavra]
